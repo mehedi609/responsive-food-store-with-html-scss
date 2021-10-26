@@ -30,4 +30,7 @@ $break-points-up: (
 // transition
 @mixin transition($time, $property: "all", $function-type: "ease-in-out") {
   transition: #{$property} #{$time}ms #{$function-type};
+  -webkit-transition: #{$property} #{$time}ms #{$function-type};
+  -moz-transition: #{$property} #{$time}ms #{$function-type};
+  -o-transition: #{$property} #{$time}ms #{$function-type};
 }

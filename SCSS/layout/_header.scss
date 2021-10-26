@@ -37,4 +37,43 @@ header {
       }
     }
   }
+
+  .nav {
+    &__top {
+      padding: 1.5rem 0;
+      &--contact,
+      &--time {
+        img {
+          margin-right: 1rem;
+        }
+        h5 {
+          font-family: v.$font-black;
+          margin-bottom: 0.25rem;
+        }
+
+        h6 {
+          font-family: v.$font-medium;
+          letter-spacing: 0.065rem;
+          font-size: 0.75rem;
+          color: v.$ternary;
+        }
+      }
+    }
+
+    &__menu {
+      a {
+        color: v.$secondary;
+        font-family: v.$font-semiBold;
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+        @include m.transition(300);
+
+        &.active,
+        &:hover {
+          background: v.$primary;
+          color: v.$pure;
+        }
+      }
+    }
+  }
 }

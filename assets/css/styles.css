@@ -193,6 +193,23 @@ button {
   }
 }
 
+.magic-shadow {
+  position: relative;
+  background: #fefefe;
+}
+.magic-shadow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4.3125rem;
+  background-image: url("../../assets/icons/shadow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: -1.3125rem;
+  z-index: -99;
+}
+
 /**
  * Basic typography style for copy text
  */
@@ -218,6 +235,36 @@ header .top-bar__auth > span {
 }
 header .top-bar__auth img:not(:last-child) {
   padding-right: 0.35rem;
+}
+header .nav__top {
+  padding: 1.5rem 0;
+}
+header .nav__top--contact img, header .nav__top--time img {
+  margin-right: 1rem;
+}
+header .nav__top--contact h5, header .nav__top--time h5 {
+  font-family: "Raleway-Black", sans-serif;
+  margin-bottom: 0.25rem;
+}
+header .nav__top--contact h6, header .nav__top--time h6 {
+  font-family: "Raleway-Medium", sans-serif;
+  letter-spacing: 0.065rem;
+  font-size: 0.75rem;
+  color: #6c6c6c;
+}
+header .nav__menu a {
+  color: #232b38;
+  font-family: "Raleway-SemiBold", sans-serif;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+}
+header .nav__menu a.active, header .nav__menu a:hover {
+  background: #eebf00;
+  color: #fefefe;
 }
 
 /*-------------------
