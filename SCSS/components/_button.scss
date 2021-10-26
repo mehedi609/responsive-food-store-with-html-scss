@@ -2,3 +2,39 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 @use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
+
+.btn {
+  padding: 1rem;
+  border-radius: f.pix_to_rem(3);
+  line-height: 0.8;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  @include m.transition(300);
+
+  &-primary {
+    background: v.$primary;
+    color: v.$heaven;
+    //border: 1px solid v.$primary;
+
+    &:hover {
+      background: v.$heaven;
+      color: v.$primary;
+      border: 1px solid v.$primary;
+    }
+  }
+
+  &-secondary {
+    background: v.$secondary;
+    color: v.$heaven;
+    //border: 1px solid v.$secondary;
+
+    &:hover {
+      background: v.$heaven;
+      color: v.$secondary;
+      border: 1px solid v.$secondary;
+    }
+  }
+}

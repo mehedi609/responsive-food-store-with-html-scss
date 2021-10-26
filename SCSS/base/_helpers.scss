@@ -104,6 +104,80 @@ $column-directions: (
   }
 }
 
+// margin and padding
+$spaces: (
+  "0-25": 0.25rem,
+  "0-5": 0.5rem,
+  "0-75": 0.75rem,
+  "1": 1rem,
+  "1-25": 1.25rem,
+  "1-5": 1.5rem,
+  "1-75": 1.75rem,
+  "2": 2rem,
+  "2-25": 2.25rem,
+  "2-5": 2.5rem,
+  "2-75": 2.75rem,
+  "3": 3rem,
+);
+
+@each $key, $value in $spaces {
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+
+  .mx-#{$key} {
+    margin: 0 $value;
+  }
+
+  .my-#{$key} {
+    margin: $value 0;
+  }
+
+  .m-#{$key} {
+    margin: $value;
+  }
+
+  .pt-#{$key} {
+    padding-top: $value;
+  }
+
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+
+  .pr-#{$key} {
+    padding-right: $value;
+  }
+
+  .pl-#{$key} {
+    padding-left: $value;
+  }
+
+  .px-#{$key} {
+    padding: 0 $value;
+  }
+
+  .py-#{$key} {
+    padding: $value 0;
+  }
+
+  .p-#{$key} {
+    padding: $value;
+  }
+}
+
 //// visibility
 //.hide-for-mobile {
 //  @include m.media-breakpoint-down(md) {
@@ -130,6 +204,6 @@ $column-directions: (
 //  animation: fade-out 0.3s ease-in-out forwards;
 //}
 //
-//.no-scroll {
-//  overflow: hidden;
-//}
+.no-scroll {
+  overflow: hidden;
+}

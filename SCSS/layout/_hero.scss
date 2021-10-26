@@ -2,3 +2,63 @@
   Hero Section
 ---------------------*/
 
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+
+.hero {
+  //position: relative;
+  height: 75vh;
+  background-image: url("../../assets/images/hero.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  .container {
+    position: relative;
+  }
+
+  &__content {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translate(0, 60%);
+  }
+
+  &__image {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    transform: translate(0, 30%);
+  }
+
+  //> div {
+  //  position: absolute;
+  //  left: 50%;
+  //  top: 50%;
+  //  transform: translate(-50%, -50%);
+  //}
+
+  &__welcome {
+    span {
+      font-family: v.$font-bold;
+      color: v.$secondary;
+    }
+  }
+
+  h1 {
+    font-family: v.$font-extraBold;
+    color: v.$secondary;
+    font-size: 2.5rem;
+    letter-spacing: 0.085rem;
+
+    span {
+      color: v.$primary;
+    }
+  }
+
+  p {
+    font-family: v.$font-medium;
+    width: 50%;
+    line-height: 1.5;
+  }
+}

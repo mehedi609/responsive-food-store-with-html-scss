@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+/*-------------------
+  Header Section
+---------------------*/
 
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
@@ -64,7 +64,6 @@ header {
       a {
         color: v.$secondary;
         font-family: v.$font-semiBold;
-        font-size: 1rem;
         padding: 1rem 1.5rem;
         @include m.transition(300);
 
