@@ -1,0 +1,12 @@
+/**
+ * Basic typography style for copy text
+ */
+
+/*=============== GOOGLE FONTS ===============*/
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+
+body {
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+
+header {
+  .top-bar {
+    background: v.$secondary;
+    font-family: v.$font-semiBold;
+    color: v.$pure;
+    padding: 0.75rem 0;
+
+    a {
+      color: v.$pure;
+    }
+
+    &__icons {
+      a {
+        &:not(:last-child) {
+          padding-right: 0.6rem;
+        }
+      }
+    }
+
+    &__auth {
+      > span {
+        padding: 0 1rem;
+      }
+
+      img {
+        &:not(:last-child) {
+          padding-right: 0.35rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use "fonts" as *;
+
+/*========== Colors ==========*/
+$primary: #eebf00;
+$secondary: #232b38;
+$ternary: #6c6c6c;
+$danger: #fe4545;
+$pure: #fefefe;
+$light: #f0f0f0;
+$heaven: #ffffff;
+$footer: #2d333f;
+
+/*========== Font and typography ==========*/
+$font-regular: "Raleway-Regular", sans-serif;
+$font-medium: "Raleway-Medium", sans-serif;
+$font-semiBold: "Raleway-SemiBold", sans-serif;
+$font-bold: "Raleway-Bold", sans-serif;
+$font-black: "Raleway-Black", sans-serif;
+//$h1-font-size: 1.5rem;
+//$h2-font-size: 1.25rem;
+//$h3-font-size: 1rem;
+$largest-font-size: 2rem;
+$medium-font-size: 1.8rem;
+$small-font-size: 1.4rem;
+//$smaller-font-size: 0.75rem;
