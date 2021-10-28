@@ -1,0 +1,88 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+
+.slider-card {
+  background: v.$pure;
+  padding: 1.5rem 0;
+  border-radius: 3px;
+
+  &__img {
+    @include m.flex-justify-align-center;
+
+    img {
+      width: 80%;
+      height: f.pix_to_rem(200);
+      object-fit: contain;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    padding-top: 1rem;
+
+    > h2 {
+      font-family: v.$font-bold;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &--stars {
+      @include m.flex-justify-align-center;
+      margin-bottom: 0.5rem;
+
+      img {
+        &:not(:last-child) {
+          margin-right: 0.25rem;
+        }
+      }
+    }
+
+    &--price {
+      font-family: v.$font-medium;
+      color: v.$danger;
+      margin-bottom: 1rem;
+    }
+
+    &--btn {
+      @include m.flex-justify-align-center;
+
+      button {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        font-family: v.$font-medium;
+        color: v.$secondary;
+        background: v.$heaven;
+        border: 2px solid v.$primary;
+        border-radius: 2px;
+        @include m.transition(300);
+
+        &:hover {
+          background: v.$primary;
+          color: v.$pure;
+        }
+
+        > img {
+          background: v.$primary;
+          padding: 0.5rem;
+          height: f.pix_to_rem(32);
+          margin-right: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+.slick-slide {
+  margin: 0 f.pix_to_rem(27);
+}
+
+.slick-list {
+  margin: 0 f.pix_to_rem(27) * -1;
+}
+
+.slick-track {
+  padding: 1rem 0;
+}

@@ -1,0 +1,36 @@
+/*-------------------
+  Top-Product Section
+---------------------*/
+
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+
+.top-products {
+  background: v.$light;
+
+  &__slider {
+    position: relative;
+
+    &--btn {
+      width: f.pix_to_rem(30);
+      height: f.pix_to_rem(30);
+      border-radius: 2px;
+      background: v.$primary;
+    }
+
+    .prev-btn {
+      position: absolute;
+      left: -50px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .next-btn {
+      position: absolute;
+      right: -50px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

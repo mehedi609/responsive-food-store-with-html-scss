@@ -1,4 +1,6 @@
 @use "sass:map";
+@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
 
 //// 640px, 1024px, 1400px
 //$break-points-up: (
@@ -33,4 +35,35 @@ $break-points-up: (
   -webkit-transition: #{$property} #{$time}ms #{$function-type};
   -moz-transition: #{$property} #{$time}ms #{$function-type};
   -o-transition: #{$property} #{$time}ms #{$function-type};
+}
+
+// flex
+@mixin flex-justify-align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// magic shadow
+@mixin magic-shadow-common {
+  position: relative;
+  background: v.$pure;
+}
+@mixin magic-shadow($sm: false) {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: f.pix_to_rem(69);
+
+  @if ($sm) {
+    background-image: url("../../assets/icons/shadow-sm.svg");
+  } @else {
+    background-image: url("../../assets/icons/shadow.svg");
+  }
+
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: f.pix_to_rem(21) * -1;
+  z-index: -99;
 }

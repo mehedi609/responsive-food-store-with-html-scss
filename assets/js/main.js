@@ -1,36 +1,31 @@
-// const hamburgerBtn = document.getElementById("hamburger-menu");
-// const overlay = document.getElementsByClassName("overlay");
-//
-// hamburgerBtn.addEventListener("click", () => {
-//   if (hamburgerBtn.classList.contains("open")) {
-//     hamburgerBtn.classList.remove("open");
-//     overlay.classList.add();
-//   } else {
-//     hamburgerBtn.classList.add("open");
-//   }
-// });
-
 $(document).ready(function () {
-  const hamburgerBtn = $("#hamburger-menu");
-  const overlay = $(".overlay");
-
-  hamburgerBtn.click(function () {
-    // hamburger menu is opened, now close it
-    if (hamburgerBtn.hasClass("open")) {
-      $("body").removeClass("no-scroll");
-      hamburgerBtn.removeClass("open");
-      $(".has-fade").each(function () {
-        $(this).removeClass("fade-in").addClass("fade-out");
-      });
-      // hamburger menu is opened, now close it
-    } else {
-      // hamburger menu is closed, now opened it
-      $("body").addClass("no-scroll");
-      hamburgerBtn.addClass("open");
-      $(".has-fade").each(function () {
-        $(this).removeClass("fade-out").addClass("fade-in");
-      });
-      // overlay.removeClass("fade-out").addClass("fade-in");
-    }
+  $(".top-products__food-slider").slick({
+    dots: false,
+    infinite: true,
+    speed: 700,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: ".prev-btn",
+    nextArrow: ".next-btn",
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
+
+  // $('.nav-trigger').click(function(){
+  //   $('.site-content-wrapper').toggleClass('scaled');
+  // })
 });
